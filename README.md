@@ -1,7 +1,5 @@
-- 👋 Hi, I’m ml , I'm 15 years old now
-- I'm a lazy and creazy student
-- 👀 I’m interested in ai,C,Python,shell...
-- 🌱 I’m currently learning ai and C
+- 开学了，代码也写不了了，想要直接拿走吧。
+- Only use c and python
 - 📫 How to reach me:https://github.com/ShiRuize-ml/
 
 <!---
