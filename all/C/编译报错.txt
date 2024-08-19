@@ -1,0 +1,43 @@
+编译报错
+In function 'freecellgroup':
+173:18: warning: passing argument 1 of 'cellkill' from incompatible pointer type [-Wincompatible-pointer-types]
+173 cellkill(&array[i]);
+struct cell **
+67:28: note: expected 'struct cell *' but argument is of type 'struct cell **'
+67 void cellkill(struct cell *cell0){
+At top level:
+217:6: error: redefinition of 'createcellgroup'
+void createcellgroup(struct cell ***array, int rows[], int numRows) {
+134:6: note: previous definition of 'createcellgroup' with type 'void(struct cell ***, int *, int)'
+134 void createcellgroup(struct cell ***array, int rows[], int numRows) {
+241:6: error: redefinition of 'printcellgroup'
+241 oid printcellgroup(struct cell **array, int rows[], int numRows) {
+157:6: note: previous definition of 'printcellgroup' with type 'void(struct cell **, int *, int)'
+157 void printcellgroup(struct cell **array, int rows[], int numRows) {
+256:6: error: redefinition of 'freecellgroup'
+256 void freecellgroup(struct cell **array, int numRows) {
+171:6: note: previous definition of 'freecellgroup' with type 'void(struct cell **, int)'
+171 void freecellgroup(struct cell **array, int numRows) {
+In function 'freecellgroup':
+258:18: warning: passing argument 1 of 'cellkill' from incompatible pointer type [-Wincompatible-pointer-types]
+258 cellkill(&array[i]);struct cell **
+67:28: note: expected 'struct cell *' but argument is of type 'struct cell **'
+67 void cellkill(struct cell *cell0){ 
+  
+int main() {  
+    FILE *fp;  
+    char *buffer = "Hello, Binary World!";  
+  
+    fp = fopen("example_with_fwrite.bin", "wb"); // 注意使用"wb"模式进行二进制写入  
+    if (fp == NULL) {  
+        perror("Error opening file");  
+        return(-1);  
+    }  
+  
+    // 使用fwrite写入数据，注意第四个参数是写入的元素个数，这里每个元素是一个字符  
+    fwrite(buffer, sizeof(char), strlen(buffer), fp);  
+  
+    fclose(fp);  
+  
+    return 0;  
+}
